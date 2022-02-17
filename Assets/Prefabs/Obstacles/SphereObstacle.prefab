@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 135619717149002730}
   - component: {fileID: 54994873017580040}
   - component: {fileID: -1277462118119482661}
+  - component: {fileID: 6688856829100811253}
   m_Layer: 0
   m_Name: SphereObstacle
   m_TagString: Obstacle
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4236fb0cac1af6041801d0ff53b0f658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6688856829100811253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966625002530012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a409b1576911b49b33ae71dd9bbc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 54994873017580040}

@@ -28,55 +28,41 @@ public class Magnet : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isActive)
-        {
             return;
-        }
 
-        foreach (var magnetizableObject in affectedMagnetizableObjects)
+        foreach (MagnetizableObject magnetizableObject in affectedMagnetizableObjects)
         {
             magnetizableObject.Magnetize(
                 (transform.position - magnetizableObject.transform.position)
-                * magnetForce * Time.fixedDeltaTime);
+                * (magnetForce * Time.fixedDeltaTime));
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!isActive)
-        {
             return;
-        }
 
-        var magnetizableObject = other.GetComponent<MagnetizableObject>();
+        MagnetizableObject magnetizableObject = other.GetComponent<MagnetizableObject>();
 
         if (magnetizableObject != null)
-        {
             AddToMagnetField(magnetizableObject);
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!isActive)
-        {
             return;
-        }
 
-        var magnetizableObject = other.GetComponent<MagnetizableObject>();
+        MagnetizableObject magnetizableObject = other.GetComponent<MagnetizableObject>();
 
         if (magnetizableObject != null)
-        {
             RemoveFromMagnetField(magnetizableObject);
-        }
     }
 
-    public void AddToMagnetField(MagnetizableObject magnetizableObject)
-    {
+    public void AddToMagnetField(MagnetizableObject magnetizableObject) => 
         affectedMagnetizableObjects.Add(magnetizableObject);
-    }
 
-    public void RemoveFromMagnetField(MagnetizableObject magnetizableObject)
-    {
+    public void RemoveFromMagnetField(MagnetizableObject magnetizableObject) => 
         affectedMagnetizableObjects.Remove(magnetizableObject);
-    }
 }

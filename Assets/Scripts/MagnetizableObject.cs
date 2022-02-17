@@ -1,14 +1,13 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-
 public class MagnetizableObject : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    [SerializeField] private Rigidbody rigidbody;
 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        if (!rigidbody)
+            rigidbody = GetComponent<Rigidbody>();
     }
 
     public void Magnetize(Vector3 direction)

@@ -32,12 +32,12 @@ public class GameEventsHandler : MonoBehaviour
 
     private void OnLevelStarted(int currentLevel)
     {
-        holeManager.Initialize();
-        magnet.Initialize();
-
         difficultyManager.CalculateDifficulty(currentLevel);
         spawner.SpawnRandomAllObjects();
         objectsCounter.CountInteractableObjects();
+        
+        holeManager.Initialize();
+        magnet.Initialize();
 
         uiManager.Fade();
         uiManager.UpdateLevelProgressBar(objectsCounter.GetGoalObjectsAmountNormilized());
