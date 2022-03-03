@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44407338, g: 0.49348664, b: 0.57292205, a: 1}
+  m_IndirectSpecularColor: {r: 0.17839044, g: 0.22336441, b: 0.3053794, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   - {fileID: 5600349681949741396, guid: 1cf7ecf9bafc28c439fa0aed299c6a19, type: 3}
   obstacleParent: {fileID: 618693166}
   goalObjectParent: {fileID: 538598985}
-  chanceToSpawn: 50
+  chanceToSpawn: 49
   goalObjectsProportion: 70
 --- !u!4 &656701074
 Transform:
